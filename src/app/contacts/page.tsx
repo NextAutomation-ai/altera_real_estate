@@ -1,12 +1,12 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useCursor } from "@/context/CursorContext";
 
 export default function Contacts() {
     const { setCursorType } = useCursor();
 
-    const containerVariants: Variants = {
+    const containerVariants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
@@ -14,9 +14,9 @@ export default function Contacts() {
         }
     };
 
-    const itemVariants: Variants = {
+    const itemVariants = {
         hidden: { opacity: 0, y: 30 },
-        show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
+        show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" as const } }
     };
 
     return (
