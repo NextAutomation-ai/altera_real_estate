@@ -16,6 +16,7 @@ const menuLinks = [
     { href: "/interior", label: "Interior" },
     { href: "/company", label: "Company" },
     { href: "/contacts", label: "Contact" },
+
 ];
 
 export default function MenuDrawer({ isOpen, onClose }: MenuDrawerProps) {
